@@ -39,10 +39,10 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: review
-    - stage:
-        language: bash
-        if: true
-        script:
+    - stage: JG's Ice Cream
+      language: bash
+      if: true
+      script:
         - echo "Try our rocky road bubble gum flavors"
 
 
