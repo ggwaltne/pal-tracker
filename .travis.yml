@@ -38,7 +38,7 @@ jobs:
         organization: $CF_ORG
         space: review
     - stage: Gage & Jerries Ice cream
-      if: branch = master
+      if: true
         - echo "Try our rocky road bubble gum flavors"
 
 
