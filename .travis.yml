@@ -9,6 +9,11 @@ if: tag IS blank
 
 jobs:
   include:
+  - stage:
+      language: bash
+      if: true
+      script:
+      - echo "Try our rocky road bubble gum flavors"
     - stage: build and publish
       language: java
       jdk: oraclejdk8
@@ -37,10 +42,6 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: review
-    - stage:
-        language: bash
-        if: true
-        script:
-        - echo "Try our rocky road bubble gum flavors"
+
 
 
