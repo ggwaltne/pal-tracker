@@ -9,9 +9,9 @@ if: tag IS blank
 
 jobs:
   include:
+    if: branch != master
     - stage: build and publish
       language: java
-      if: false
       jdk: oraclejdk8
       install: skip
       script: ./gradlew clean build
@@ -26,7 +26,6 @@ jobs:
         skip_cleanup: true
     - stage: deploy to review
       language: bash
-      if: false
       script:
         - echo "Downloading $RELEASE_TAG"
         - wget -P build/libs https://github.com/$GITHUB_USERNAME/pal-tracker/releases/download/$RELEASE_TAG/pal-tracker.jar
@@ -39,10 +38,7 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: review
-    - stage: JGs Ice Cream
-      if: true
-      script:
-        - echo "Try our rocky road bubble gum flavors"
+
 
 
 
