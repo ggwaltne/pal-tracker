@@ -37,6 +37,8 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: review
-      echo_stage:
-        if: branch = master
-        - echo "I'm to sexy for my shirt"
+    - stage: Gage & Jerries Ice cream
+      if: branch = master
+        - echo "Try our rocky road bubble gum flavors"
+
+
